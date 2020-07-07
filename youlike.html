@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url('https://fonts.googleapis.com/css?family=Anton');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Display&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300&display=swap');
+body {
+	background: #1f1a25;
+	color:white;
+
+}
+
+.background-image {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: block;
+    background-image: url("https://picsum.photos/1280/720/");
+         transform: scale(1.05);
+    height: 1000px;
+    width: 1500px;
+    -webkit-filter: blur(2px);
+    filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+
+}
+#spaceText {
+    padding-right: 16px;
+}
+.card {
+ 
+  width: 300px;
+  height: 557px;
+  border-radius: 10px 10px 60px 60px;
+  	box-shadow: 8px 7px rgba(0, 0, 0, 0);
+  background: rgba(0, 0, 0, 0.2);
+    padding: 5px;
+
+
+  margin-top: 10px;
+  font-family: arial;
+}
+.bottomleft {
+  position: absolute;
+  font-size:23px;
+font-family: 'Pacifico', cursive;
+text-shadow: 2px 4px rgba(0, 0, 0, 0.9);
+  bottom: 0;
+  left: 16px;
+    margin-bottom: -62px;
+     transition: transform .7s;
+}
+
+.bottomleft:hover {
+  opacity: 1;
+
+  transform: scale(1.05);
+}
+
+#buttcenter {
+	
+  background-color: rgba(255, 255, 255, 1)	; 
+  border: none;
+  color: white;
+  padding: 18px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+
+  cursor: pointer;
+}
+#butt1 {
+	  margin: -4px;
+  background-color: rgba(255, 255, 255, 1)	; 
+  border: none;
+  color: white;
+  padding: 18px 43px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+border-radius: 0px 0px 0px 2000px;
+  cursor: pointer;
+}
+#butt2 {
+	
+  background-color: rgba(255, 255, 255, 1)	; 
+  border: none;
+  margin: -4px;
+  color: white;
+  padding: 18px 43px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+border-radius: 0px 0px 2000px 0px;
+  cursor: pointer;
+}
+#buttcenter:active {
+	
+  background-color: rgba(255, 255, 255, 0.2)	; 
+
+}
+
+#butt1:active {
+	
+  background-color: rgba(255, 255, 255, 0.2)	; 
+
+}
+#butt2:active {
+	
+  background-color: rgba(255, 255, 255, 0.2)	; 
+
+}
+.photo {
+		transition: transform .7s;
+	  margin-bottom: -4px;
+border-radius: 10px 10px 0px 0px;
+}
+
+.conteudo {
+    left: 0;
+    right: 0;
+    z-index: 99999;
+		position: absolute;
+  
+}
+
+
+</style>
+</head>
+ <div class="background-image"></div>
+<body>
+	
+	 <div class="conteudo"> 
+	<center>
+<div class="card">
+    <img id="capt" class="photo" src="https://picsum.photos/300/500/">
+    <button onClick=like(); id="butt1">💖</button>
+     <button onClick=reload();  id="buttcenter">🔄</button>
+     <button onClick=unlike(); id="butt2">💔</button>
+     
+    </div>
+</center>
+     <div class="bottomleft">
+    <p>You Like?</p>
+  </div>
+</div>
+	<script type="text/javascript">
+			var source = "https://picsum.photos/300/500/"
+			
+function like()
+
+
+{ 
+
+}
+function unlike()
+
+{ 
+}
+
+function reload()
+
+{ 
+
+   timestamp = (new Date()).getTime(),
+        newUrl = source + '?_=' + timestamp;
+    document.getElementById("capt").src = newUrl;
+
+
+}
+
+</script>
+
+</body>
+</html> 
